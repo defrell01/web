@@ -11,8 +11,7 @@ let divTimes = (a: number, b: number) => {
     else {
         return (`no`)
     }
-
-}
+};
 
 readline.question(`Введите числа в формате "a b"\n`, (lng: string) => {
 
