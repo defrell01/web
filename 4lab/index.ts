@@ -4,27 +4,12 @@ const readline = require('readline').createInterface({
 });
 
 const check = (array: any[]) => {
-    let counter: number = 0
-
-    // // test
-    // for (var i: number = 0; i < array.length; i++) {
-    //     console.log(`${Number(array[i])}`)
-    // }
-    // //test
     
-    if (array[0] == array[2]) counter++;
-
-    for (var i: number = 0; i < array.length-1; i++) {
-        if (array[i] == array[i+1]){
-            counter++;
-        }
-    }
-
-    if (counter == 1) {
-        console.log(`Равнобедренный`)
-    }
-    else if (counter == 2) {
+    if (array[0] == array[1] && array[0] == array[2] && array[1] == array[2]) {
         console.log(`Равносторонний`)
+    }
+    else if (array[0] == array[1] || array[0] == array[2] || array[1] == array[2]) {
+        console.log(`Равнобедренный`)
     }
     else {
         console.log(`Разносторонний`)
