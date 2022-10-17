@@ -21,7 +21,10 @@ readline.question(`Введите дату в формате MM.YYYY \n`, (str) 
   let temp = str.trim().split(".");
   errorHandler(temp);
   let _ = new Date(`${temp[1]}-${temp[0]}-13`);
-  // console.log(_);
+  if (_.toString() == 'Invalid Date') {
+    console.log(`Неверная дата`);
+    process.exit();
+  }
   getWeekDay(_);
   readline.close();
 });
